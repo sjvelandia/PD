@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Mix N' Match</title>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<header>
+		<div class="ib-display logo">
+			<a href="#" class="ib-display home-link">
+				<img src="http://files.softicons.com/download/food-drinks-icons/apple-fruit-icon-by-svengraph/png/512x512/apple_fruit.png"/>
+			</a>
+			<h4 class="ib-display company-name">
+				Mix N' Match
+			</h4>
+		</div>
+
+		<div class="ib-display header-actions-wrapper">	
+			<button class="ib-display profile">
+				<img class="user-img" src="https://7s.safaricom.co.ke/su7s/templates/su7s/img/user_profile.png"/>
+			</button>
+		</div>
+	</header>
+
+
+	<div class="content-wrapper" ng-controller="WordsCtrl">
+
+		<h1> What is 
+			<span class="word-selected">
+				{{selected[0]}}  
+			</span>
+			
+			<span ng-show='selected[1]'>and</span> 
+			<span class="word-selected">
+				{{selected[1]}}
+			</span>
+			
+		</h1>
+
+		<section class="word-tiles">
+			<div class="words-container">
+				<div class="word-box" ng-repeat="item in words">
+					<label>
+						<input type="checkbox" value="{{item.word}}" ng-model="selection" ng-change="check(item.word)" ng-disabled="disable(item.word)"/>
+						<span>{{item.word}}</span>
+					</label>
+				</div>
+			</div>
+		
+		</section>
+
+		<h1 class="name-match">
+			{{match}}
+		</h1>
+
+		<h3 ng-show="match">(I owe you the image *_* )</h3>
+		
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

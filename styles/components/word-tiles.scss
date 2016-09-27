@@ -1,0 +1,79 @@
+
+.word-tiles {
+	background: #d8e6f4;
+	padding: 20px;
+}
+
+.words-container {
+    display: -moz-flex;
+    display: flex;
+    flex-flow: row wrap;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
+
+    label {
+	    display: inline-block;
+	    max-width: 100%;
+	    margin-bottom: 5px;
+   		font-weight: 700;
+	}
+
+	.word-box {
+	    margin: 0 10px 10px 0;
+	    overflow: hidden;
+	    float: left;
+	    position: relative;
+
+	    label {
+		    float: left;
+		    width: 100%;
+		    margin: 0;
+
+		    input {
+			    position: absolute;
+			    top: -20px;
+
+			    &:checked + span {
+			    	background-color: #62bad9;
+				    border: 1px solid #62bad9;
+				    color: #fff;
+			    }
+
+			    &:disabled + span {
+			    	opacity: .4;
+			    }
+			}
+
+			span {
+			    border-radius: 4px;
+			    -webkit-touch-callout: none;
+			    -webkit-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none;
+			    border: 1px solid #dbdbdb;
+			    display: inline-block;
+			    cursor: pointer;
+			    background: #f8f8f8;
+			    font-size: 12px;
+			    text-align: center;
+			    height: 40px;
+			    line-height: 40px;
+			    padding: 0 20px;
+			    font-weight: 400;
+			    color: rgba(74,74,74,.75);
+			    text-transform: uppercase;
+
+
+			    &:hover {
+			    	background: #fff;
+				    border: 1px solid #62bad9;
+				    color: rgba(74,74,74,.75);
+				}
+			}
+		}
+	}	
+}
+

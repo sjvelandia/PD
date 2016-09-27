@@ -1,0 +1,43 @@
+/*********************************
+	Remove browser defaults
+*********************************/
+
+html, body, div, header, footer, span, p, h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+
+input:focus,
+input:active {
+	outline: none;
+}
+
+span {
+	display: inline-block;
+}
+
+button {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	border: none;
+	box-shadow: none;
+	background: none;
+	cursor: pointer;
+}
+
+/*********************************
+	Utility classes
+*********************************/
+
+.ib-display {
+	display: inline-block;
+} 
+
+.position-bottom {
+	position: absolute;
+	bottom: 0
+}
+
+
