@@ -1,0 +1,55 @@
+/*********************************
+	Start Header
+*********************************/
+header {
+	height: 60px;
+	line-height: 60px;
+	background: #232829;
+	width: 100%;
+	color: #a3a9b1;
+
+	.logo {
+		margin-left: 50px;
+	}
+
+	.home-link {
+		text-decoration: none;
+	}
+
+	.home-link img {
+		vertical-align: middle;
+		height: 30px;
+	}
+
+	.header-actions-wrapper {
+		float: right;
+	}
+
+	.profile {
+		margin: 10px 50px 0 0;
+	}
+
+	.profile:after {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 4px 0 4px;
+		border-color: #738186 transparent transparent transparent;
+		display: inline-block;
+		margin: 0 0 11px 5px;
+	}
+
+	.profile:hover:after {
+		border-color: #fff transparent transparent transparent;
+	}
+
+	.profile img {
+		height: 32px;
+	    -webkit-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+	}
+}
+
+

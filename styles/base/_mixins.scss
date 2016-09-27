@@ -1,0 +1,19 @@
+@mixin font-size($pixels){   //  ->->->->->->->->->->->->->->->->->-> USE THIS ALWAYS INSTEAD OF FONT-SIZE: PROPERTY
+  font-size: $pixels + px; //fallback for old browsers
+  font-size: ($pixels/$browser-context) + rem;
+}
+
+@mixin breakpoint($point) {
+  @if $point == mobileonly {
+    @media (max-width: 767px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 990px) { @content ; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1200px)  { @content ; }
+  }
+}
